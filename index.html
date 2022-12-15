@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title></title>
+
+	<!-- <css> -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/swiper.css">
+</head>
+
+<body>
+	<div id="container">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-1.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-2.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-3.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-4.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-5.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-6.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-7.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-8.jpg">
+				</div>
+				<div class=" swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-9.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-10.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-11.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-12.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-13.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-14.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-15.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-16.jpg">
+				</div>
+				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-17.jpg">
+				</div>
+			</div>
+
+
+
+
+			<!--  pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+
+		</div><!-- end swipe-->
+
+		<div id="timerWrapper">
+			<span id="timer"></span>
+			<button id="continue">Continue</button>
+		</div>
+		<div id="modal-bg"></div>
+
+	</div>
+	<!--end container-->
+
+	<!-- <javascript> -->
+	<script src="js/swiper.js"></script>
+	<script src="js/timeout.js"></script>
+
+	<script>
+		const swiper = new Swiper('.swiper', {
+			loop: true,
+
+			pagination: {
+				el: '.swiper-pagination',
+				type: "progressbar",
+			},
+
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		});
+	</script>
+
+</body>
+
+</html>
