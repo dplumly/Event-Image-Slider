@@ -4,8 +4,8 @@ let modalBackground = document.getElementById("modal-background");
 let timeLeft = 15;
 let intervalId = null
 
+// activity that keeps the page live
 function setup() {
-    // this.addEventListener("mousemove", resetTimer, false);
     this.addEventListener("onClick", resetTimer, false);
     this.addEventListener("mousedown", resetTimer, false);
     this.addEventListener("keypress", resetTimer, false);
@@ -13,17 +13,16 @@ function setup() {
     this.addEventListener("mousewheel", resetTimer, false);
     this.addEventListener("touchmove", resetTimer, false);
     this.addEventListener("MSPointerMove", resetTimer, false);
-    console.log('2');
     startTimer();
 }
 setup();
 
-
+// main timeout function
 function startTimer() {
-    console.log('3');
     timeoutID = setTimeout(goInactive, 60000);
 }
 
+// clear modal and reset timer
 function resetTimer(e) {
     clock.style.display = 'none';
     modalBackground.style.display = 'none';
@@ -35,10 +34,10 @@ function resetTimer(e) {
 
     clearInterval(intervalId);
     clearTimeout(timeoutID);
-    console.log('4');
     startTimer();
 }
 
+// modal pop up and will reset the page if no activity
 function goInactive() {
     intervalId = setInterval(() => {
         document.getElementById('timer').innerHTML = String(timeLeft);
@@ -53,18 +52,15 @@ function goInactive() {
         }
 
         if (timeLeft > 0) {
-            console.log('5');
         }
         timeLeft--;
 
         if (timeLeft === 0) {
-            console.log('reload');
             window.location.reload(true);
         }
     }, 1000);
 
     timeLeft = 15;
-    console.log('6');
 }
 
 const continueSession = document.getElementById('continue');

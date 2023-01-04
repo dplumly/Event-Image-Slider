@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="Minimal slider for onsite events">
+	<meta name="author" content="Donnie Plumly">
 
 	<title></title>
 
@@ -20,9 +20,32 @@
 		<div class="swiper">
 			<div class="swiper-wrapper">
 				<!-- Slides -->
+
+
+				<!-- <div class="swiper-slide">
+					<div id="videoWrapper">
+						<div id="videoControls">
+							<div class="playpause" onclick="toggleVideoPlayer()">
+								<input id="playpause" type="checkbox" value="None" name="check" />
+								<label for="playpause" tabindex=1></label>
+							</div>
+						</div> -->
+
+				<div class="swiper-slide">
+
+					<div id="videoWrapper">
+						<button id="playPauseButton" class='play' onclick='toggleVideoPlayer()'></button>
+
+						<video id="videoPlayButton" muted>
+							<source src="video/myVideo.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+
 				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-1.jpg">
 				</div>
-				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-2.jpg">
+				<!-- <div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-2.jpg">
 				</div>
 				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-3.jpg">
 				</div>
@@ -53,8 +76,8 @@
 				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-16.jpg">
 				</div>
 				<div class="swiper-slide"><img src="img/The-State-of-Salesforce-2022-23-Executive-Summary-.pptx-17.jpg">
-				</div>
-			</div>
+				</div> -->
+			</div> <!-- swiper-wrapper -->
 
 
 
@@ -68,11 +91,14 @@
 
 		</div><!-- end swipe-->
 
+
+		<!-- Modal for timeout countdown-->
 		<div id="timerWrapper" class="fade-in-modal fade-out-modal">
+			<h3>Are you still there?</h3>
 			<span id="timer"></span>
 			<button id="continue">Continue</button>
 		</div>
-		<div id="modal-background" class="modal-bg-fade-in"></div>
+		<div id="modal-background" class="modal-bg-fade-in"></div><!-- Modal background-->
 
 	</div>
 	<!--end container-->
@@ -80,7 +106,9 @@
 	<!-- <javascript> -->
 	<script src="js/swiper.js"></script>
 	<script src="js/timeout.js"></script>
+	<script src="js/videoPlayer.js"></script>
 
+	<!-- Swiper JS -->
 	<script>
 		const swiper = new Swiper('.swiper', {
 			loop: true,

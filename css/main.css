@@ -1,20 +1,17 @@
-/*==============================================
-Fonts
-==============================================*/
-
-/* @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); */
-
-@font-face {
-    font-family: 'Lato';
-    src: url('Lato-Regular.ttf') format('ttf'),
-        url('Lato-Bold.ttf') format('ttf'),
-        url('Lato-Thin.ttf') format('ttf');
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/*==============================================
+Fonts
+==============================================*/
+/* IBM Plex Sans */
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.ttf') format('ttf'),
+        url('../fonts/IBM-Plex-Sans/IBMPlexSans-Regular-V01.1.otf') format('otf')
 }
 
 /*==============================================
@@ -64,6 +61,21 @@ Main Styles
     align-items: center;
 }
 
+/* controls the touch areas size */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    /* padding: 10em;
+    margin: -10em; */
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    /* padding: 10em;
+    margin: -10em; */
+}
+
 
 /*==============================================
 Modal
@@ -71,12 +83,12 @@ Modal
 #timerWrapper {
     position: fixed;
     height: 300px;
-    width: 400px;
+    width: 450px;
     /* max-width: 75vw;
     max-height: 75vh; */
-    border-radius: 10px;
-    background: white;
-    z-index: 2;
+    /* border-radius: 10px; */
+    background: #fff;
+    z-index: 3;
     display: none;
     transition: all ease 1s;
 }
@@ -85,20 +97,29 @@ Modal
     display: block;
     width: 100%;
     margin: auto;
-    padding-top: 60px;
     text-align: center;
     font-size: 150px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 15px auto 0 auto;
+    display: table;
+    font-size: 34px;
+    font-weight: 400;
+    color: #161616;
 }
 
 #continue {
     color: #fff;
-    background: red;
+    background: #0f62fe;
     border: none;
     padding: 10px 20px;
     margin-right: 20px;
-    float: right;
     cursor: pointer;
+    position: absolute;
+    right: 10px;
 }
 
 #modal-background {
@@ -173,8 +194,6 @@ Modal
     }
 }
 
-
-
 .fade-out-modal {
     animation: fadeOutModal 1s;
     -webkit-animation: fadeOutModal 1s;
@@ -232,3 +251,82 @@ Modal
         opacity: 0;
     }
 }
+
+
+
+
+
+
+/*==============================================
+Modal
+==============================================*/
+video {
+    width: 100%;
+}
+
+#videoWrapper {
+    position: relative;
+}
+
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    height: 74px;
+    border-color: transparent transparent transparent #fff;
+    background: transparent;
+    transition: 100ms all ease;
+    will-change: border-width;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+    z-index: 2;
+}
+
+/* .pause {
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+} */
+
+
+
+
+
+
+/* css play button 
+https: //css-tricks.com/making-pure-css-playpause-button/
+
+*/
+/* .playpause label {
+    display: block;
+    box-sizing: border-box;
+    width: 0;
+    height: 25px;
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0 0px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.playpause input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.playpause input[type="checkbox"]:checked+label {
+    border-style: solid;
+    border-width: 14px 0 14px 20px;
+}
+
+.playpause input[type="checkbox"]:focus+label {
+    box-shadow: 0 0 5px lightblue;
+} */
